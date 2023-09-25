@@ -30,6 +30,7 @@ const rules: KarabinerRules[] = [
   ...createHyperSubLayers({
     // o = "Open" applications
     o: {
+      a: app("Arc"),
       g: app("Google Chrome"),
       v: app("Visual Studio Code"),
 
@@ -41,6 +42,7 @@ const rules: KarabinerRules[] = [
       m: app("Mattermost"),
       f: app("Figma"),
       r: app("Telegram"),
+      p: app("PhpStorm"),
       // w: open("https://web.whatsapp.com"),
       /* l: open(
         "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
