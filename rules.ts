@@ -62,8 +62,8 @@ const rules: KarabinerRules[] = [
         description: "Window: First Third",
         to: [
           {
-            key_code: "left_arrow",
-            modifiers: ["right_option", "right_control"],
+            key_code: "d",
+            modifiers: ["right_control", "left_option"],
           },
         ],
       },
@@ -89,8 +89,8 @@ const rules: KarabinerRules[] = [
         description: "Window: Last Third",
         to: [
           {
-            key_code: "right_arrow",
-            modifiers: ["right_option", "right_control"],
+            key_code: "g",
+            modifiers: ["right_control", "left_option"],
           },
         ],
       },

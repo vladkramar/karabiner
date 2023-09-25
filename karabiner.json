@@ -333,10 +333,10 @@
                 "description": "Window: First Third",
                 "to": [
                   {
-                    "key_code": "left_arrow",
+                    "key_code": "d",
                     "modifiers": [
-                      "right_option",
-                      "right_control"
+                      "right_control",
+                      "left_option"
                     ]
                   }
                 ],
@@ -417,10 +417,10 @@
                 "description": "Window: Last Third",
                 "to": [
                   {
-                    "key_code": "right_arrow",
+                    "key_code": "g",
                     "modifiers": [
-                      "right_option",
-                      "right_control"
+                      "right_control",
+                      "left_option"
                     ]
                   }
                 ],
