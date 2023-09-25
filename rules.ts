@@ -25,50 +25,26 @@ const rules: KarabinerRules[] = [
         ],
         type: "basic",
       },
-      //      {
-      //        type: "basic",
-      //        description: "Disable CMD + Tab to force Hyper Key usage",
-      //        from: {
-      //          key_code: "tab",
-      //          modifiers: {
-      //            mandatory: ["left_command"],
-      //          },
-      //        },
-      //        to: [
-      //          {
-      //            key_code: "tab",
-      //          },
-      //        ],
-      //      },
     ],
   },
   ...createHyperSubLayers({
     // o = "Open" applications
     o: {
       g: app("Google Chrome"),
-      c: app("Cron"),
       v: app("Visual Studio Code"),
-      d: app("Discord"),
-      s: app("Slack"),
-      e: app("Superhuman"),
-      n: app("Notion"),
+
       t: app("Terminal"),
       // Open todo list managed via *H*ypersonic
-      h: open(
+      /* h: open(
         "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
-      ),
-      z: app("zoom.us"),
-      m: app("Mochi"),
+      ), */
+      m: app("Mattermost"),
       f: app("Figma"),
       r: app("Telegram"),
-      // "i"Message
-      i: app("Messages"),
-      p: app("Spotify"),
-      a: app("iA Presenter"),
-      w: open("https://web.whatsapp.com"),
-      l: open(
+      // w: open("https://web.whatsapp.com"),
+      /* l: open(
         "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
-      ),
+      ), */
     },
 
     // w = "Window" via rectangle.app
@@ -263,21 +239,6 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      // Turn on Elgato KeyLight
-      y: {
-        to: [
-          {
-            shell_command: `curl -H 'Content-Type: application/json' --request PUT --data '{ "numberOfLights": 1, "lights": [ { "on": 1, "brightness": 100, "temperature": 215 } ] }' http://192.168.8.84:9123/elgato/lights`,
-          },
-        ],
-      },
-      h: {
-        to: [
-          {
-            shell_command: `curl -H 'Content-Type: application/json' --request PUT --data '{ "numberOfLights": 1, "lights": [ { "on": 0, "brightness": 100, "temperature": 215 } ] }' http://192.168.8.84:9123/elgato/lights`,
-          },
-        ],
-      },
     },
 
     // v = "moVe" which isn't "m" because we want it to be on the left hand
@@ -315,7 +276,7 @@ const rules: KarabinerRules[] = [
     },
 
     // c = Musi*c* which isn't "m" because we want it to be on the left hand
-    c: {
+    /* c: {
       p: {
         to: [{ key_code: "play_or_pause" }],
       },
@@ -325,19 +286,22 @@ const rules: KarabinerRules[] = [
       b: {
         to: [{ key_code: "rewind" }],
       },
-    },
+    }, */
 
     // r = "Raycast"
     r: {
-      l: open(
-        "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
-      ),
-      e: open("raycast://extensions/raycast/emoji/search-emoji"),
-      c: open("raycast://extensions/raycast/raycast/confetti"),
-      a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-      s: open("raycast://extensions/peduarte/silent-mention/index"),
+      // l: open(
+      //   "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
+      // ),
+      // e: open("raycast://extensions/raycast/emoji/search-emoji"),
+      // c: open("raycast://extensions/raycast/raycast/confetti"),
+      // a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
+      // s: open("raycast://extensions/peduarte/silent-mention/index"),
       h: open(
         "raycast://extensions/raycast/clipboard-history/clipboard-history"
+      ),
+      i: open(
+        "raycast://extensions/VladKram/imgur-uploader/index"
       ),
       1: open(
         "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
@@ -346,6 +310,26 @@ const rules: KarabinerRules[] = [
         "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
       ),
     },
+
+    // l = "Language"
+    l: {
+      e: {
+        description: "Language: English",
+        to: [{
+          select_input_source: {
+            language: "^en$"
+          }
+        }],
+      },
+      u: {
+        description: "Language: Ukrainian",
+        to: [{
+          select_input_source: {
+            language: "^uk$"
+          }
+        }],
+      }
+    }
   }),
 ];
 

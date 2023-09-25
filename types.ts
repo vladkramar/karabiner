@@ -50,9 +50,9 @@ type KeybaordTypeCondition = {
 }
 
 type InputSourceCondition = {
-  type:"input_source_if" | "input_source_unless", 
+  type:"input_source_if" | "input_source_unless",
   input_sources: InputSource[],
-  description?: string, 
+  description?: string,
 }
 
 interface InputSource {
@@ -70,7 +70,7 @@ type VaribaleCondition = {
 
 type EventChangedCondition = {
   type: "event_changed_if" | "event_changed_unless",
-  value: boolean, 
+  value: boolean,
   description?: string,
 }
 
@@ -104,6 +104,7 @@ export interface To {
     value: boolean | number | string;
   };
   mouse_key?: MouseKey;
+  select_input_source?: InputSource;
 }
 
 export interface MouseKey {
