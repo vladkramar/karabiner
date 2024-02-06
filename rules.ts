@@ -34,7 +34,7 @@ const rules: KarabinerRules[] = [
       g: app("Google Chrome"),
       v: app("Visual Studio Code"),
 
-      t: app("Terminal"),
+      t: app("Warp"),
       // Open todo list managed via *H*ypersonic
       /* h: open(
         "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
