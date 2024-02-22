@@ -317,9 +317,9 @@ const rules: KarabinerRules[] = [
       // c: open("raycast://extensions/raycast/raycast/confetti"),
       // a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       // s: open("raycast://extensions/peduarte/silent-mention/index"),
-      h: open(
-        "raycast://extensions/raycast/clipboard-history/clipboard-history"
-      ),
+      // h: open(
+      //   "raycast://extensions/raycast/clipboard-history/clipboard-history"
+      // ),
       i: open(
         "raycast://extensions/VladKram/imgur-uploader/index"
       ),
