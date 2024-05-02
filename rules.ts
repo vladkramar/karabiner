@@ -133,6 +133,24 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
+      b: {
+        description: "Window: Go to previous desktop",
+        to: [
+          {
+            key_code: "left_arrow",
+            modifiers: ["left_control"],
+          },
+        ],
+      },
+      n: {
+        description: "Window: Go to next desktop",
+        to: [
+          {
+            key_code: "right_arrow",
+            modifiers: ["left_control"],
+          },
+        ],
+      },
     },
 
     // s = "System"
