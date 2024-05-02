@@ -31,59 +31,33 @@ const rules: KarabinerRules[] = [
     // o = "Open" applications
     o: {
       a: app("Arc"),
-      g: app("Google Chrome"),
+      // g: app("Google Chrome"),
       v: app("Visual Studio Code"),
 
-      t: app("Warp"),
+      // t: app("Warp"),
       // Open todo list managed via *H*ypersonic
       /* h: open(
         "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
       ), */
       m: app("Mattermost"),
+      n: app("Notion"),
       f: app("Figma"),
       r: app("Telegram"),
-      p: app("PhpStorm"),
+      // p: app("PhpStorm"),
       // w: open("https://web.whatsapp.com"),
       /* l: open(
         "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
       ), */
     },
 
-    // w = "Window" via rectangle.app
+    // w = "Window" via Raycast
     w: {
-      semicolon: {
-        description: "Window: Hide",
-        to: [
-          {
-            key_code: "h",
-            modifiers: ["right_command"],
-          },
-        ],
-      },
-      y: {
-        description: "Window: First Third",
-        to: [
-          {
-            key_code: "d",
-            modifiers: ["right_control", "left_option"],
-          },
-        ],
-      },
-      e: {
-        description: "Window: First Two Thirds",
-        to: [
-          {
-            key_code: "e",
-            modifiers: ["right_control", "left_option"],
-          },
-        ],
-      },
       k: {
         description: "Window: Top Half",
         to: [
           {
-            key_code: "up_arrow",
-            modifiers: ["right_option", "right_command"],
+            key_code: "k",
+            modifiers: ["left_option", "left_command", "left_control"],
           },
         ],
       },
@@ -91,26 +65,8 @@ const rules: KarabinerRules[] = [
         description: "Window: Bottom Half",
         to: [
           {
-            key_code: "down_arrow",
-            modifiers: ["right_option", "right_command"],
-          },
-        ],
-      },
-      o: {
-        description: "Window: Last Third",
-        to: [
-          {
-            key_code: "g",
-            modifiers: ["right_control", "left_option"],
-          },
-        ],
-      },
-      t: {
-        description: "Window: Last Two Thirds",
-        to: [
-          {
-            key_code: "t",
-            modifiers: ["right_control", "left_option"],
+            key_code: "j",
+            modifiers: ["left_option", "left_command", "left_control"],
           },
         ],
       },
@@ -118,8 +74,8 @@ const rules: KarabinerRules[] = [
         description: "Window: Left Half",
         to: [
           {
-            key_code: "left_arrow",
-            modifiers: ["right_option", "right_command"],
+            key_code: "h",
+            modifiers: ["left_option", "left_command", "left_control"],
           },
         ],
       },
@@ -127,8 +83,8 @@ const rules: KarabinerRules[] = [
         description: "Window: Right Half",
         to: [
           {
-            key_code: "right_arrow",
-            modifiers: ["right_option", "right_command"],
+            key_code: "l",
+            modifiers: ["left_option", "left_command", "left_control"],
           },
         ],
       },
@@ -137,53 +93,16 @@ const rules: KarabinerRules[] = [
         to: [
           {
             key_code: "f",
-            modifiers: ["right_option", "right_command"],
+            modifiers: ["left_option", "left_command", "left_control"],
           },
         ],
       },
-      u: {
-        description: "Window: Previous Tab",
+      c: {
+        description: "Window: Almost Maximize and Center",
         to: [
           {
-            key_code: "tab",
-            modifiers: ["right_control", "right_shift"],
-          },
-        ],
-      },
-      i: {
-        description: "Window: Next Tab",
-        to: [
-          {
-            key_code: "tab",
-            modifiers: ["right_control"],
-          },
-        ],
-      },
-      n: {
-        description: "Window: Next Window",
-        to: [
-          {
-            key_code: "grave_accent_and_tilde",
-            modifiers: ["right_command"],
-          },
-        ],
-      },
-      b: {
-        description: "Window: Back",
-        to: [
-          {
-            key_code: "open_bracket",
-            modifiers: ["right_command"],
-          },
-        ],
-      },
-      // Note: No literal connection. Both f and n are already taken.
-      m: {
-        description: "Window: Forward",
-        to: [
-          {
-            key_code: "close_bracket",
-            modifiers: ["right_command"],
+            key_code: "c",
+            modifiers: ["left_option", "left_command", "left_control"],
           },
         ],
       },
@@ -191,8 +110,26 @@ const rules: KarabinerRules[] = [
         description: "Window: Next display",
         to: [
           {
-            key_code: "right_arrow",
-            modifiers: ["right_control", "right_option", "right_command"],
+            key_code: "d",
+            modifiers: ["left_control", "left_option", "left_command"],
+          },
+        ],
+      },
+      r: {
+        description: "Window: Next desktop",
+        to: [
+          {
+            key_code: "r",
+            modifiers: ["left_control", "left_option", "left_command"],
+          },
+        ],
+      },
+      e: {
+        description: "Window: Previous desktop",
+        to: [
+          {
+            key_code: "e",
+            modifiers: ["left_control", "left_option", "left_command"],
           },
         ],
       },
@@ -314,7 +251,7 @@ const rules: KarabinerRules[] = [
       //   "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
       // ),
       // e: open("raycast://extensions/raycast/emoji/search-emoji"),
-      // c: open("raycast://extensions/raycast/raycast/confetti"),
+      c: open("raycast://extensions/raycast/raycast/confetti"),
       // a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
       // s: open("raycast://extensions/peduarte/silent-mention/index"),
       // h: open(
@@ -323,12 +260,12 @@ const rules: KarabinerRules[] = [
       i: open(
         "raycast://extensions/VladKram/imgur-uploader/index"
       ),
-      1: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
-      ),
-      2: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
-      ),
+      // 1: open(
+      //   "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
+      // ),
+      // 2: open(
+      //   "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
+      // ),
     },
 
     // l = "Language"
